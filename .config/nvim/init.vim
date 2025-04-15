@@ -15,6 +15,7 @@ nnoremap <Space>P "+P
 
 nnoremap ( {
 nnoremap ) }
+nnoremap cgn *Ncgn // Allows for cgn to work without having searched for or used "*" beforehand.
 
 set ignorecase smartcase
 set nohlsearch
