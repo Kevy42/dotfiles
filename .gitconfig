@@ -1,0 +1,11 @@
+# NOTE: This file contains nonsensitive information in order to make it storable in the dotfiles repo. Check .gitconfig-private for sensitive information.
+[include]
+    path = ~/.gitconfig-private
+[init]
+	defaultBranch = main
+[core]
+	editor = vim
+#[push]
+#	autoSetupRemote = origin
+[rerere]
+	enabled = true
