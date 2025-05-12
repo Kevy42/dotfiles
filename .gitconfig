@@ -9,3 +9,7 @@
 #	autoSetupRemote = origin
 [rerere]
 	enabled = true
+[submodule]
+	recurse = true
+[push]
+	recurseSubmodules = on-demand
