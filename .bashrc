@@ -116,6 +116,7 @@ fi
 alias ls='ls -A -c --color=auto --time-style=long-iso -g -h -s -N -o'
 alias c='wl-copy'
 alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+alias vim='nvim'
 
 gs() {
     git log --all --shortstat --pretty=oneline --graph -n 15
