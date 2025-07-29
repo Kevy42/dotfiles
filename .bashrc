@@ -91,6 +91,8 @@ if ! shopt -oq posix; then
 fi
 
 # Custom
+alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+
 alias ls='ls -A -c --color=auto --time-style=long-iso -g -h -s -N -o'
 alias dir='dir --color=auto'
 alias grep='grep --color=auto'
@@ -106,4 +108,5 @@ gs() {
 }
 
 alias gr='git log -g --all --abbrev-commit --pretty=oneline -n 15'
-alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+
+alias watch='watch -d -n 0.5 -t -c'
