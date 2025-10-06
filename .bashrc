@@ -97,6 +97,7 @@ alias ls='ls -A -c --color=auto --time-style=long-iso -h -l -N -s'
 alias dir='dir --color=auto'
 alias grep='grep --color=auto'
 alias vim='nvim'
+export MANPAGER='nvim +Man!'
 alias c='wl-copy'
 
 gs() {
