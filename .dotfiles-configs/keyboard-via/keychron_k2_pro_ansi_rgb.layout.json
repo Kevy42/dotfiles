@@ -4,7 +4,7 @@
   "macros": [
     "{KC_LCTL,KC_DEL}{KC_DEL}",
     "ip -c -br r && echo && ip -c -br a && echo && ip -c -br n && echo && ip -c -br l{KC_ENT}",
-    "ping -b -H google.com{KC_ENT}",
+    "ping -b google.com{KC_ENT}",
     "dig google.com{KC_ENT}",
     "sudo tcpdump -e --interface any -n --direction inout -q -tttt ",
     "sudo ss --numeric --listening --tcp --udp --processes{KC_ENT}",
