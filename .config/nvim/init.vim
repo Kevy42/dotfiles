@@ -25,5 +25,7 @@ nnoremap <Space>P "+P
 
 nnoremap ( {
 nnoremap ) }
+xnoremap ( {
+xnoremap ) }
 nnoremap cgn *Ncgn " Allows for cgn to work without having searched for or used "*" beforehand.
 
