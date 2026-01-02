@@ -1,6 +1,6 @@
 return {
-    url = "ellisonleao/gruvbox.nvim",
-    cond = true,
+    url = "https://github.com/ellisonleao/gruvbox.nvim",
+    cond = false,
     priority = 1000, -- Recommended to be high for colorschemes
 
     config = function()

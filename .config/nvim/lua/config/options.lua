@@ -10,7 +10,7 @@ vim.o.relativenumber = true
 
 vim.o.mouse = "a"
 
--- vim.o.showmode = false -- already displayed by plugin
+vim.o.showmode = false -- already displayed by plugin
 
 --  Wait until main eventloop is running as option could delay startup.
 --  Not sure if really needed but was taken from kickstart.nvim
@@ -24,7 +24,7 @@ vim.o.breakindent = true -- Keep visual indent for part of line that's wrapped
 vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.opt.incsearch = true -- Show matches as you type
-vim.opt.hlsearch = false -- Don't highlight search results
+-- vim.opt.hlsearch = false -- Don't highlight search results
 
 vim.o.signcolumn = "yes"
 
