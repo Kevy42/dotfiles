@@ -1,9 +1,35 @@
+vim.keymap.set("n", "0", "^", { desc = "Respect indentation when going to end of line" })
+
+vim.keymap.set({"n", "v", "x", "s"}, "(", "{", { desc = "Replace '(' with '{'" })
+vim.keymap.set({"n", "v", "x", "s"}, ")", "}", { desc = "Replace ')' with '}'" })
+
+vim.keymap.set({"n", "v", "x", "s"}, "<C-d>", "<C-d>zz", { desc = "Center cursor when paging up" })
+vim.keymap.set({"n", "v", "x", "s"}, "<C-u>", "<C-u>zz", { desc = "Center cursor when paging down" })
+
+-- Dedicated storage register for important pieces of text
+vim.keymap.set("n", "<leader>y", "\"zy", { desc = "Yank into z register" })
+vim.keymap.set("n", "<leader>Y", "\"zY", { desc = "Yank line-wise into z register" })
+vim.keymap.set("n", "<leader>d", "\"zd", { desc = "Delete into z register" })
+vim.keymap.set("n", "<leader>D", "\"zD", { desc = "Delete to end of line into z register" })
+vim.keymap.set("n", "<leader>c", "\"zc", { desc = "Change into z register" })
+vim.keymap.set("n", "<leader>C", "\"zC", { desc = "Change to end of line into z register" })
+vim.keymap.set("n", "<leader>x", "\"zx", { desc = "Delete single character into z register" })
+vim.keymap.set("n", "<leader>X", "\"zX", { desc = "Delete single character backwards into z register" })
+vim.keymap.set("n", "<leader>p", "\"zp", { desc = "Paste after cursor from z register" })
+vim.keymap.set("n", "<leader>P", "\"zP", { desc = "Paste before cursor from z register" })
+
+vim.keymap.set("n", "n", "nzz", { desc = "Center cursor when jumping between search matches" })
+vim.keymap.set("n", "N", "Nzz", { desc = "Center cursor when jumping between search matches" })
+
+-- vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left split" })
+-- vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right split" })
+-- vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower split" })
+-- vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper split" })
+
+vim.keymap.set("v", "<", "<gv", { desc = "Keep visual mode selection during indentation" })
+vim.keymap.set("v", ">", ">gv", { desc = "Keep visual mode selection during indentation" })
+
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear highlights on escape" })
+
+vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic quickfix list" }) -- Needed?
 vim.keymap.set("n", "K", ":vert Man <C-R><C-W><CR>", { desc = "Open manpage of word under cursor" })
-
-vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" }) -- Needed?
-
--- vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
--- vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
--- vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
--- vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })

@@ -1,7 +1,7 @@
 vim.o.termguicolors = true -- Enable 24-bit colors
 
 vim.g.mapleader = " "
--- vim.g.maplocalleader = "\" -- Already the default value, added for clarity
+vim.g.maplocalleader = "\\"
 
 vim.g.have_nerd_font = true -- User defined variable used by various plugins
 
