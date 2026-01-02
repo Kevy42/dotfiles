@@ -32,7 +32,7 @@ require("lazy").setup({
 
     install = {
         missing = true, -- Automatically install missing plugins on startup
-        colorscheme = { "gruvbox" }
+        colorscheme = { "tokyonight" }
     },
 
     checker = {

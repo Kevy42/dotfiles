@@ -6,7 +6,7 @@ return {
     config = function()
         require("tokyonight").setup({
             style = "moon", -- Can be "storm", "night" or "day", "day" is applied when "background = light"
-            transparent = true, -- For terminal transparency to work
+            transparent = true -- For terminal transparency to work
         })
 
         vim.o.background = "dark" -- Dark or light

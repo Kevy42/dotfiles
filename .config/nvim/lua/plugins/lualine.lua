@@ -19,7 +19,7 @@ return {
             lualine_a = { "mode" },
             lualine_b = { "branch", "filename" },
             lualine_c = { "diagnostics", "searchcount" },
-            lualine_x = { "filetype", "selectioncount", "filesize" },
+            lualine_x = { "filetype", "lsp_status", "selectioncount", "filesize" },
             lualine_y = { },
             lualine_z = { "progress" }
         },
