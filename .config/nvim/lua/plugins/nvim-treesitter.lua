@@ -1,15 +1,12 @@
+# TODO: go through all options once tree-sitter 1.0 has been released
 return {
     url = "https://github.com/nvim-treesitter/nvim-treesitter",
-
     cond = true,
 
-    -- opts = {
-    -- },
-
     config = function()
-        -- require('nvim-treesitter').setup({
-        --
-        -- }),
+        require('nvim-treesitter').setup({
+            auto_install = false
+        })
 
         require('nvim-treesitter').install({
             "bash",
@@ -37,13 +34,5 @@ return {
     end,
 
     build = ":TSUpdate", -- Executed after plugin is installed or updated
-
     lazy = false, -- Lazy-load plugin
-
-    -- Lazy-load on key mapping
-    -- keys = {
-        -- { "<leader>f", "[COMMAND]", mode="n", desc = "[DESC]" },
-    -- },
-
-    -- version = "",
 }
