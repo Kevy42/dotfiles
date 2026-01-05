@@ -45,7 +45,7 @@ require("lazy").setup({
             -- Disable builtin plugins
             disabled_plugins = {
               "tutor",
-              -- "netrwPlugin",
+              "netrwPlugin", -- Replaced by file exporer plugin
             },
         },
     }
