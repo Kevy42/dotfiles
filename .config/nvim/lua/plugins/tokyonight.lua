@@ -5,7 +5,7 @@ return {
 
     config = function()
         require("tokyonight").setup({
-            style = "moon", -- Can be "storm", "night" or "day", "day" is applied when "background = light"
+            style = "storm", -- Can be "night", "storm", "moon" or "day", "day" is applied when "background = light"
             transparent = true -- For terminal transparency to work
         })
 

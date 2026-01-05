@@ -17,7 +17,7 @@ return {
     -- NOTE: You cannot use both "opts" and "config" at the same time and will be forced to do a manual "setup()" in config if additional code is to be ran
     opts = { },
 
-    -- Executed after plugin is loaded and "setup()" is called
+    -- Executed after plugin is loaded
     -- config = function()
     -- end,
 
