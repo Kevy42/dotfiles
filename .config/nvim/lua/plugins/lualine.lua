@@ -28,15 +28,7 @@ return {
                 },
             }
         },
-    },
+    }
 
-
-    -- Executed after plugin is loaded and "setup()" is called
-    -- config = function()
-    -- end,
-
-    lazy = false, -- Lazy-load plugin
+    lazy = false -- Lazy-load plugin
 }
-
--- diff           -- git diff status
--- lsp_status
