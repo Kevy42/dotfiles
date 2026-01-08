@@ -1,4 +1,4 @@
-vim.keymap.set("n", "0", "^", { desc = "Respect indentation when going to end of line" })
+vim.keymap.set("n", "0", "^", { desc = "Respect indentation when going to beginning of line" })
 
 vim.keymap.set({"n", "v", "x", "s"}, "(", "{", { desc = "Replace '(' with '{'" })
 vim.keymap.set({"n", "v", "x", "s"}, ")", "}", { desc = "Replace ')' with '}'" })
@@ -24,9 +24,10 @@ vim.keymap.set("n", "<leader>P", "\"zP", { desc = "Paste before cursor from z re
 vim.keymap.set("n", "n", "nzz", { desc = "Center cursor when jumping between search matches" })
 vim.keymap.set("n", "N", "Nzz", { desc = "Center cursor when jumping between search matches" })
 
-vim.keymap.set("n", "<Tab>", "<cmd>bn<CR>", { desc = "Switch to next buffer" })
-vim.keymap.set("n", "<S-Tab>", "<cmd>bp<CR>", { desc = "Switch to previous buffer" })
-vim.keymap.set("n", "<leader>bd", function() vim.api.nvim_buf_delete(0, {}) end, { desc = "Switch to previous buffer" })
+-- Handled by BufferLine plugin
+-- vim.keymap.set("n", "<Tab>", "<cmd>bn<CR>", { desc = "Switch to next buffer" })
+-- vim.keymap.set("n", "<S-Tab>", "<cmd>bp<CR>", { desc = "Switch to previous buffer" })
+vim.keymap.set("n", "<leader>bx", function() vim.api.nvim_buf_delete(0, {}) end, { desc = "Delete current buffer" })
 
 -- vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left split" })
 -- vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right split" })

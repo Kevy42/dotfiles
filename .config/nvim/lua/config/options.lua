@@ -32,7 +32,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.swapfile = false
 vim.opt.updatetime = 1000 -- Save to swap file every second
 
-vim.opt.timeoutlen = 500 -- (Mostly for) leader key timeout
+vim.opt.timeoutlen = 750 -- (Mostly for) leader key timeout
 
 -- Keep current buffer on the "correct side" when splitting
 vim.opt.splitright = true
