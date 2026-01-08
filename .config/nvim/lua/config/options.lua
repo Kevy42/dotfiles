@@ -9,6 +9,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 vim.opt.mouse = "a"
+vim.opt.mousemoveevent = true
 
 vim.opt.showmode = false -- already displayed by plugin
 
@@ -73,3 +74,5 @@ vim.opt.concealcursor = ""
 -- vim.opt.guicursor = {
 --     "n-v-c-sm:block,i-ci-ve:block,r-cr-o:hor20" -- Use block style cursor in insert mode as well
 -- }
+
+

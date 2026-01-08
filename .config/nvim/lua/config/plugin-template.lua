@@ -1,7 +1,7 @@
 return {
     url = "[URL]",
 
-    -- dependencies = { }
+    -- dependencies = { },
 
     -- "enabled" excludes it from the merged plugin spec meaning lazy.nvim treats it as being non-existent and will therefore not
     -- even install it upon initial Neovim setup. "cond" on the other hand inludes it in the spec and simply only ignores it. Only one can be used at a time
@@ -31,7 +31,7 @@ return {
 
     -- Lazy-load on key mapping
     -- keys = {
-        -- { "<leader>f", "[COMMAND]", mode="n", desc = "[DESC]" },
+        -- { mode="n", "<leader>f", "[COMMAND]", desc = "[DESC]" },
     -- },
 
     -- branch = "",

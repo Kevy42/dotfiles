@@ -29,6 +29,7 @@ return {
             "python",
             "regex",
             "ssh_config",
+            "vimdoc",
             "yaml"
         })
     end,

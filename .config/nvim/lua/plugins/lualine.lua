@@ -28,7 +28,7 @@ return {
                 },
             }
         },
-    }
+    },
 
     lazy = false -- Lazy-load plugin
 }
