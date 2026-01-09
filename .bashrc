@@ -111,3 +111,9 @@ gs() {
 alias gr='git log -g --all --abbrev-commit --pretty=oneline -n 15'
 
 alias watch='watch -d -n 0.5 -t -c'
+
+
+# Temporarily using nvm to install NPM as Debian 12 doesn't bundle the two. Had dependency issues while trying to install it using apt
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

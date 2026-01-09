@@ -14,6 +14,15 @@ return {
             relativenumber = false,               -- Relative numbers off
         },
 
+        -- Updates file tree as you open files in different directories
+        update_focused_file = {
+            enable = true,
+
+            update_root = {
+                enable = true,
+            }
+        },
+
         modified = {
             enable=true,
         },
