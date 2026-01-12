@@ -40,4 +40,3 @@ vim.keymap.set("v", ">", ">gv", { desc = "Keep visual mode selection during inde
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear highlights on escape" })
 
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic quickfix list" }) -- Needed?
-vim.keymap.set("n", "K", ":vert Man <C-R><C-W><CR>", { desc = "Open manpage of word under cursor" })

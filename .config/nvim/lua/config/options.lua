@@ -75,4 +75,8 @@ vim.opt.concealcursor = ""
 --     "n-v-c-sm:block,i-ci-ve:block,r-cr-o:hor20" -- Use block style cursor in insert mode as well
 -- }
 
-
+vim.diagnostic.config({
+    virtual_text = true,
+    -- virtual_lines = true,
+    update_in_insert = true
+})

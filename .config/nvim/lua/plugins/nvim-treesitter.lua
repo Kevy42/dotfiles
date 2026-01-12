@@ -4,9 +4,7 @@ return {
     cond = true,
 
     config = function()
-        require('nvim-treesitter').setup({
-            auto_install = false
-        })
+        require('nvim-treesitter').setup({ })
 
         require('nvim-treesitter').install({
             "bash",
