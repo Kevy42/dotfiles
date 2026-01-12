@@ -76,7 +76,9 @@ vim.opt.concealcursor = ""
 -- }
 
 vim.diagnostic.config({
+    -- For displaying inline LSP messages
     virtual_text = true,
     -- virtual_lines = true,
+
     update_in_insert = true
 })
