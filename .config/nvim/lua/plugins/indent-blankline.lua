@@ -2,12 +2,12 @@ return {
     url = "https://github.com/lukas-reineke/indent-blankline.nvim",
     cond = true,
 
-    opts = { 
+    opts = {
         indent = {
             char = "▏" -- Can be "▏", "▎", "╎" or "┆"
         }
     },
 
     main = "ibl",
-    lazy = false, -- Lazy-load plugin
+    event = { "BufEnter" }, -- Lazy-load
 }

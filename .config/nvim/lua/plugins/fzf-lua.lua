@@ -14,8 +14,6 @@ return {
         }
     },
 
-    lazy = false, -- Lazy-load plugin
-
     -- Lazy-load on key mapping
     keys = {
         -- Buffers and files

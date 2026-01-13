@@ -32,8 +32,6 @@ return {
         },
     },
 
-    lazy = false, -- Lazy-load plugin
-
     -- Lazy-load on key mapping
     keys = {
         { mode="n", "<leader>e", ":NvimTreeToggle<CR>", desc = "Toggle file explorer" },
