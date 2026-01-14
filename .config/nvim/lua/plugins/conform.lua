@@ -4,7 +4,7 @@ return {
 
     opts = {
         formatters_by_ft = {
-            -- lua = { "stylua" },
+            lua = { lsp_format = "fallback" },
             sh = { "shfmt" },
         },
 
@@ -12,7 +12,7 @@ return {
         -- ["_"] = { "trim_whitespace" }, -- Use across files with no detected formatter
 
         default_format_opts = {
-            -- NOTE: will still use existing LSP formatter if language isn't specified in "formatters_by_ft"
+            -- NOTE: "lsp_format = 'fallback'" is needed for all languages without formatters
             lsp_format = "never", -- Can be "never", "fallback", "prefer", "first" or "last"
         },
 

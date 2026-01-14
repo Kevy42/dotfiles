@@ -1,8 +1,6 @@
 return {
     url = "https://github.com/akinsho/bufferline.nvim",
-
     dependencies = { "nvim-tree/nvim-web-devicons" },
-
     cond = true,
 
     -- Have lazy.nvim run "setup require("[PLUGIN NAME]").setup([OPTIONS])" and supply with options instead of having to use "config" or manually running "setup()".
@@ -43,26 +41,25 @@ return {
 
     -- Lazy-load on key mapping
     keys = {
-        { mode="n", "<leader>bP", "<cmd>BufferLineTogglePin<CR>", desc = "Pin current buffer" },
+        { mode = "n", "<leader>bP", "<cmd>BufferLineTogglePin<CR>",                desc = "Pin current buffer" },
 
-        { mode="n", "<leader>1", function() require('bufferline').go_to(1) end, desc = "Go to buffer number 1" },
-        { mode="n", "<leader>2", function() require('bufferline').go_to(2) end, desc = "Go to buffer number 2" },
-        { mode="n", "<leader>3", function() require('bufferline').go_to(3) end, desc = "Go to buffer number 3" },
-        { mode="n", "<leader>4", function() require('bufferline').go_to(4) end, desc = "Go to buffer number 4" },
-        { mode="n", "<leader>5", function() require('bufferline').go_to(5) end, desc = "Go to buffer number 5" },
-        { mode="n", "<leader>6", function() require('bufferline').go_to(6) end, desc = "Go to buffer number 6" },
-        { mode="n", "<leader>7", function() require('bufferline').go_to(7) end, desc = "Go to buffer number 7" },
-        { mode="n", "<leader>8", function() require('bufferline').go_to(8) end, desc = "Go to buffer number 8" },
-        { mode="n", "<leader>9", function() require('bufferline').go_to(9) end, desc = "Go to buffer number 9" },
+        { mode = "n", "<leader>1",  function() require('bufferline').go_to(1) end, desc = "Go to buffer number 1" },
+        { mode = "n", "<leader>2",  function() require('bufferline').go_to(2) end, desc = "Go to buffer number 2" },
+        { mode = "n", "<leader>3",  function() require('bufferline').go_to(3) end, desc = "Go to buffer number 3" },
+        { mode = "n", "<leader>4",  function() require('bufferline').go_to(4) end, desc = "Go to buffer number 4" },
+        { mode = "n", "<leader>5",  function() require('bufferline').go_to(5) end, desc = "Go to buffer number 5" },
+        { mode = "n", "<leader>6",  function() require('bufferline').go_to(6) end, desc = "Go to buffer number 6" },
+        { mode = "n", "<leader>7",  function() require('bufferline').go_to(7) end, desc = "Go to buffer number 7" },
+        { mode = "n", "<leader>8",  function() require('bufferline').go_to(8) end, desc = "Go to buffer number 8" },
+        { mode = "n", "<leader>9",  function() require('bufferline').go_to(9) end, desc = "Go to buffer number 9" },
 
         -- Could technically be done with Neovim's built in "bn" & "bp", but probably best to use the stuff provided by the plugin
-        { mode="n", "<TAB>", "<cmd>BufferLineCycleNext<CR>", desc = "Switch to next buffer" },
-        { mode="n", "<S-TAB>", "<cmd>BufferLineCyclePrev<CR>", desc = "Switch to previous buffer" },
+        { mode = "n", "<TAB>",      "<cmd>BufferLineCycleNext<CR>",                desc = "Switch to next buffer" },
+        { mode = "n", "<S-TAB>",    "<cmd>BufferLineCyclePrev<CR>",                desc = "Switch to previous buffer" },
 
-        { mode="n", "<leader>bm", "<cmd>BufferLineMoveNext<CR>", desc = "Move current buffer left" },
-        { mode="n", "<leader>bM", "<cmd>BufferLineMovePrev<CR>", desc = "Move current buffer right" }
+        { mode = "n", "<leader>bm", "<cmd>BufferLineMoveNext<CR>",                 desc = "Move current buffer left" },
+        { mode = "n", "<leader>bM", "<cmd>BufferLineMovePrev<CR>",                 desc = "Move current buffer right" }
     },
 
     version = "*",
 }
-

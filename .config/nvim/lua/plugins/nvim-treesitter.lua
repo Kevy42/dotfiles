@@ -4,7 +4,7 @@ return {
     cond = true,
 
     config = function()
-        require('nvim-treesitter').setup({ })
+        require('nvim-treesitter').setup({})
 
         require('nvim-treesitter').install({
             "bash",
@@ -33,5 +33,5 @@ return {
     end,
 
     build = ":TSUpdate", -- Executed after plugin is installed or updated
-    lazy = false, -- Lazy-load plugin
+    lazy = false,        -- Lazy-load plugin
 }

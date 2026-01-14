@@ -1,13 +1,13 @@
 vim.keymap.set("n", "0", "^", { desc = "Respect indentation when going to beginning of line" })
 
-vim.keymap.set({"n", "v", "x", "s"}, "(", "{", { desc = "Replace '(' with '{'" })
-vim.keymap.set({"n", "v", "x", "s"}, ")", "}", { desc = "Replace ')' with '}'" })
+vim.keymap.set({ "n", "v", "x", "s" }, "(", "{", { desc = "Replace '(' with '{'" })
+vim.keymap.set({ "n", "v", "x", "s" }, ")", "}", { desc = "Replace ')' with '}'" })
 
 vim.keymap.set("n", "<C-y>", "<C-y>k", { desc = "Keep cursor center when scrolling up" })
 vim.keymap.set("n", "<C-e>", "<C-e>j", { desc = "Keep cursor center when scrolling down" })
 
-vim.keymap.set({"n", "v", "x", "s"}, "<C-d>", "<C-d>zz", { desc = "Center cursor when paging up" })
-vim.keymap.set({"n", "v", "x", "s"}, "<C-u>", "<C-u>zz", { desc = "Center cursor when paging down" })
+vim.keymap.set({ "n", "v", "x", "s" }, "<C-d>", "<C-d>zz", { desc = "Center cursor when paging up" })
+vim.keymap.set({ "n", "v", "x", "s" }, "<C-u>", "<C-u>zz", { desc = "Center cursor when paging down" })
 
 -- Dedicated storage register for important pieces of text
 vim.keymap.set("n", "<leader>y", "\"zy", { desc = "Yank into z register" })
@@ -24,10 +24,25 @@ vim.keymap.set("n", "<leader>P", "\"zP", { desc = "Paste before cursor from z re
 vim.keymap.set("n", "n", "nzz", { desc = "Center cursor when jumping between search matches" })
 vim.keymap.set("n", "N", "Nzz", { desc = "Center cursor when jumping between search matches" })
 
--- Handled by BufferLine plugin
--- vim.keymap.set("n", "<Tab>", "<cmd>bn<CR>", { desc = "Switch to next buffer" })
--- vim.keymap.set("n", "<S-Tab>", "<cmd>bp<CR>", { desc = "Switch to previous buffer" })
-vim.keymap.set("n", "<leader>bx", function() vim.api.nvim_buf_delete(0, {}) end, { desc = "Delete current buffer" })
+vim.keymap.set("n", "<leader>bn", "<cmd>bn<CR>", { desc = "Switch to next buffer" })
+vim.keymap.set("n", "<leader>bp", "<cmd>bp<CR>", { desc = "Switch to previous buffer" })
+
+-- Ueful when using bufferline plugin
+vim.keymap.set("n", "<leader>bx", function()
+    pcall(vim.api.nvim_buf_delete, 0, { force = false })
+end, { desc = "Close current buffer" })
+
+vim.keymap.set("n", "<leader>bX", function()
+    for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+        if vim.api.nvim_buf_is_loaded(buf) then
+            local bt = vim.api.nvim_buf_get_option(buf, "buftype")
+
+            if bt == "" then -- only close normal buffers
+                pcall(vim.api.nvim_buf_delete, buf, { force = false })
+            end
+        end
+    end
+end, { desc = "Close all buffers" })
 
 -- vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left split" })
 -- vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right split" })

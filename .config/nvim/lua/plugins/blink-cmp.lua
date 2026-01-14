@@ -89,5 +89,5 @@ return {
     -- opts_extend = { "sources.default" }, -- Not found in the lazy.nvim docs but is used in blink-cmp example config. Needed?
 
     event = { "InsertEnter", "CmdlineEnter", "TermEnter" }, -- Lazy-load
-    version = "1.*", -- Release tag required to download pre-built binaries
+    version = "1.*",                                        -- Release tag required to download pre-built binaries
 }

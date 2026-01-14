@@ -1,7 +1,7 @@
 return {
     url = "https://github.com/nvim-tree/nvim-tree.lua",
 
-    dependencies = { 
+    dependencies = {
         "nvim-tree/nvim-web-devicons"
     },
 
@@ -10,8 +10,8 @@ return {
     opts = {
         view = {
             width = 45,
-            number = false,                       -- Line numbers off
-            relativenumber = false,               -- Relative numbers off
+            number = false,         -- Line numbers off
+            relativenumber = false, -- Relative numbers off
         },
 
         -- Updates file tree as you open files in different directories
@@ -24,7 +24,7 @@ return {
         },
 
         modified = {
-            enable=true,
+            enable = true,
         },
 
         filters = {
@@ -34,7 +34,7 @@ return {
 
     -- Lazy-load on key mapping
     keys = {
-        { mode="n", "<leader>e", ":NvimTreeToggle<CR>", desc = "Toggle file explorer" },
+        { mode = "n", "<leader>e", ":NvimTreeToggle<CR>", desc = "Toggle file explorer" },
     },
 
     version = "*",

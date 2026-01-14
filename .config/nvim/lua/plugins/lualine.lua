@@ -11,7 +11,7 @@ return {
 
     opts = {
         options = {
-            theme = "material", -- Or "auto"
+            theme = "auto",      -- Or "auto"
             globalstatus = true, -- Use one statusline for across all splits
         },
 
@@ -20,7 +20,7 @@ return {
             lualine_b = { "branch", "filename" },
             lualine_c = { "diagnostics", "searchcount" },
             lualine_x = { "filetype", "lsp_status", "selectioncount", "filesize", "progress" },
-            lualine_y = { },
+            lualine_y = {},
             lualine_z = {
                 {
                     "datetime",
