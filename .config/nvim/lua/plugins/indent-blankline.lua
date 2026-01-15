@@ -4,7 +4,7 @@ return {
 
     opts = {
         indent = {
-            char = "▏" -- Can be "▏", "▎", "╎" or "┆"
+            char = "▎" -- Can be "▏", "▎", "╎" or "┆"
         }
     },
 

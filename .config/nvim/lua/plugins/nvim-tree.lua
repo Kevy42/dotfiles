@@ -28,6 +28,7 @@ return {
         },
 
         filters = {
+            git_ignored = false, -- Show gitignored files
             dotfiles = false,
         },
     },

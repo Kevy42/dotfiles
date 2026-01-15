@@ -10,7 +10,7 @@ return {
             trigger_on_accept = true,
 
             keymap = {
-                accept = "<tab>",
+                accept = "<S-tab>", -- Cannot use "<tab>" like with blink-cmp as it'd prevent me from actually tabbing
                 accept_word = "<right>",
                 -- accept_line = "<tab>",
                 next = "<C-\\>", -- Trigger suggestion

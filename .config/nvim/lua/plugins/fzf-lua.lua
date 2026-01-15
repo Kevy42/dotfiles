@@ -11,6 +11,14 @@ return {
         winopts = {
             height = 0.75,
             width = 0.75,
+        },
+
+        files = {
+            no_ignore = true, -- Show gitignored files
+        },
+
+        grep = {
+            no_ignore = true, -- Show gitignored files
         }
     },
 
