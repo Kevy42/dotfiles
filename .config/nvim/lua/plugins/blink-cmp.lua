@@ -11,9 +11,9 @@ return {
         keymap = {
             preset = "super-tab", -- Can be "default", "super-tab", "enter" or "none"
 
-            -- Mimic standard CTRL-p and CTRL-n keybinds for going forward and backward in history in Bash (and Neovim)
-            ["<C-n>"] = { "select_prev", "fallback" },
-            ["<C-p>"] = { "select_next", "fallback" },
+            -- Easier CTRL-p and CTRL-n keybinds for going forward and backward in history in Bash (and Neovim)
+            -- ["<C-n>"] = { "select_prev", "fallback" },
+            -- ["<C-p>"] = { "select_next", "fallback" },
         },
 
         sources = { default = { "lsp", "path", "snippets", "buffer" }, }, -- Does NOT signify order in which items are displayed, only what sources are used

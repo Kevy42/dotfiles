@@ -54,8 +54,9 @@ return {
         { mode = "n", "<leader>9",  function() require('bufferline').go_to(9) end, desc = "Go to buffer number 9" },
 
         -- Could technically be done with Neovim's built in "bn" & "bp", but probably best to use the stuff provided by the plugin
-        { mode = "n", "<TAB>",      "<cmd>BufferLineCycleNext<CR>",                desc = "Switch to next buffer" },
-        { mode = "n", "<S-TAB>",    "<cmd>BufferLineCyclePrev<CR>",                desc = "Switch to previous buffer" },
+        -- NOTE: collides with <C-i> due to ASCII conflict
+        -- { mode = "n", "<TAB>",      "<cmd>BufferLineCycleNext<CR>",                desc = "Switch to next buffer" },
+        -- { mode = "n", "<S-TAB>",    "<cmd>BufferLineCyclePrev<CR>",                desc = "Switch to previous buffer" },
 
         { mode = "n", "<leader>bm", "<cmd>BufferLineMoveNext<CR>",                 desc = "Move current buffer left" },
         { mode = "n", "<leader>bM", "<cmd>BufferLineMovePrev<CR>",                 desc = "Move current buffer right" }
