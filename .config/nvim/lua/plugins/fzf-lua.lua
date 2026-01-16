@@ -14,11 +14,15 @@ return {
         },
 
         files = {
+            hidden_ = true,   -- On by default
+            -- follow = true,   -- Follow symlinks
             no_ignore = true, -- Show gitignored files
         },
 
         grep = {
-            no_ignore = true, -- Show gitignored files
+            hidden = true,    -- Search through dotfiles
+            -- follow = true,   -- Follow symlinks
+            no_ignore = true, -- Search gitignored files
         }
     },
 
