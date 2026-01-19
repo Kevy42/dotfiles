@@ -4,7 +4,7 @@ return {
     priority = 1000,
 
     config = function()
-        require('kanagawa').setup({
+        require("kanagawa").setup({
             transparent = false, -- Allow terminal transparency
             dimInactive = false,
             terminalColors = true,
