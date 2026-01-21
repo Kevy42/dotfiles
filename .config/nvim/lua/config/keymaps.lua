@@ -24,8 +24,16 @@ vim.keymap.set("n", "<leader>P", "\"zP", { desc = "Paste before cursor from z re
 vim.keymap.set("n", "n", "nzz", { desc = "Center cursor when jumping between search matches" })
 vim.keymap.set("n", "N", "Nzz", { desc = "Center cursor when jumping between search matches" })
 
-vim.keymap.set("n", "<leader>bn", "<cmd>bn<CR>", { desc = "Switch to next buffer" })
-vim.keymap.set("n", "<leader>bp", "<cmd>bp<CR>", { desc = "Switch to previous buffer" })
+vim.keymap.set("n", "<leader>n", "<cmd>bn<CR>", { desc = "Switch to next buffer" })
+vim.keymap.set("n", "<leader>N", "<cmd>bp<CR>", { desc = "Switch to previous buffer" })
+
+vim.keymap.set("n", "<leader>bf", function()
+    require("conform").format({
+        timeout_ms = 10000,
+        -- Using "fallback" instead of "never" as is done in conform.lua because "formatters_by_ft" isn't supproted here
+        lsp_format = "fallback", -- Can be "never", "fallback", "prefer", "first" or "last".
+    })
+end, { desc = "Format current buffer" })
 
 -- Ueful when using bufferline plugin
 vim.keymap.set("n", "<leader>bx", function()
