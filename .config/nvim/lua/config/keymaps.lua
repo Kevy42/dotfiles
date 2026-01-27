@@ -27,6 +27,12 @@ vim.keymap.set("n", "N", "Nzz", { desc = "Center cursor when jumping between sea
 vim.keymap.set("n", "<leader>n", "<cmd>bn<CR>", { desc = "Switch to next buffer" })
 vim.keymap.set("n", "<leader>N", "<cmd>bp<CR>", { desc = "Switch to previous buffer" })
 
+vim.keymap.set("n", "<leader>gy", function()
+    local dir = vim.fn.expand("%:p:h") -- Get base directory of the current buffer
+    vim.fn.setreg("+", dir)            -- Copy to clipboard
+    print("Copied path: " .. dir)
+end, { desc = "Copy current buffer directory to clipboard" })
+
 vim.keymap.set("n", "<leader>bf", function()
     require("conform").format({
         timeout_ms = 10000,
