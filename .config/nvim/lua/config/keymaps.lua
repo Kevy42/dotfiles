@@ -1,7 +1,7 @@
 vim.keymap.set("n", "0", "^", { desc = "Respect indentation when going to beginning of line" })
 
-vim.keymap.set({ "n", "v", "x", "s" }, "(", "{", { desc = "Replace '(' with '{'" })
-vim.keymap.set({ "n", "v", "x", "s" }, ")", "}", { desc = "Replace ')' with '}'" })
+vim.keymap.set({ "n", "v", "x", "o", "s" }, "(", "{", { desc = "Replace '(' with '{'" })
+vim.keymap.set({ "n", "v", "x", "o", "s" }, ")", "}", { desc = "Replace ')' with '}'" })
 
 vim.keymap.set("n", "<C-y>", "<C-y>k", { desc = "Keep cursor center when scrolling up" })
 vim.keymap.set("n", "<C-e>", "<C-e>j", { desc = "Keep cursor center when scrolling down" })
