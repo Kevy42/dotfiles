@@ -7,8 +7,9 @@ return {
         min_match_len = 1,
 
         animate = {
-            enabled = false, -- requires snacks.nvim
+            enabled = false,   -- requires snacks.nvim
         },
+        debounce_timeout = 100 -- delay before updating highlights
     },
 
     lazy = false, -- Lazy-load plugin

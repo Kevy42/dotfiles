@@ -41,6 +41,10 @@ vim.keymap.set("n", "<leader>bf", function()
     })
 end, { desc = "Format current buffer" })
 
+vim.keymap.set("n", "<leader>gi", function()
+    vim.cmd.edit(vim.fn.stdpath("config") .. "/init.lua")
+end, { desc = "Go to Neovim init.lua" })
+
 -- Ueful when using bufferline plugin
 vim.keymap.set("n", "<leader>bx", function()
     pcall(vim.api.nvim_buf_delete, 0, { force = false })
