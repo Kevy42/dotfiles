@@ -11,10 +11,14 @@ return {
         winopts = {
             height = 0.75,
             width = 0.75,
+
+            preview = {
+                wrap = true
+            },
         },
 
         files = {
-            hidden_ = true,   -- On by default
+            hidden = true,    -- On by default
             -- follow = true,   -- Follow symlinks
             no_ignore = true, -- Show gitignored files
         },

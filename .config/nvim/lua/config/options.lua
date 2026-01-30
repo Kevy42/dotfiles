@@ -16,7 +16,7 @@ vim.opt.showmode = false -- already displayed by plugin
 --  Wait until main eventloop is running as option could delay startup.
 --  Not sure if really needed but was taken from kickstart.nvim
 vim.schedule(function()
-  vim.opt.clipboard = "unnamedplus"
+    vim.opt.clipboard = "unnamedplus"
 end)
 
 vim.opt.wrap = false
@@ -32,7 +32,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.swapfile = false
 vim.opt.updatetime = 1000 -- Save to swap file every second
 
-vim.opt.timeoutlen = 750 -- (Mostly for) leader key timeout
+vim.opt.timeoutlen = 750  -- (Mostly for) leader key timeout
 
 -- Keep current buffer on the "correct side" when splitting
 vim.opt.splitright = true
@@ -48,7 +48,7 @@ vim.opt.listchars = {
 
 vim.opt.inccommand = 'split' -- Preview substitutions
 
-vim.opt.cursorline = true -- Highlght cursor line
+vim.opt.cursorline = true    -- Highlght cursor line
 
 vim.opt.scrolloff = 15
 
@@ -57,23 +57,23 @@ vim.opt.scrolloff = 15
 vim.opt.confirm = true
 
 vim.opt.expandtab = true -- Use spaces instead of tabs
-vim.opt.shiftwidth = 4 -- Number of spaces auto-indentation (e.g ">>", "<<" or "=") should use
-vim.opt.softtabstop = 4 -- number spaces to insert when tab key is pressed
-vim.opt.tabstop = 4 -- How many spaces one tab character should be shown as
+vim.opt.shiftwidth = 4   -- Number of spaces auto-indentation (e.g ">>", "<<" or "=") should use
+vim.opt.softtabstop = 4  -- number spaces to insert when tab key is pressed
+vim.opt.tabstop = 4      -- How many spaces one tab character should be shown as
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 
 vim.opt.lazyredraw = false -- Redraw while executing macros (better UX)
 
-vim.opt.autoread = true -- Automatically read changes to file if external program writes to it
+vim.opt.autoread = true    -- Automatically read changes to file if external program writes to it
 
 -- Show all characters in file
 vim.opt.conceallevel = 0
 vim.opt.concealcursor = ""
 
--- vim.opt.guicursor = {
---     "n-v-c-sm:block,i-ci-ve:block,r-cr-o:hor20" -- Use block style cursor in insert mode as well
--- }
+vim.opt.guicursor = {
+    "n-v-c-sm:block,i-ci-ve:block,r-cr-o:hor20" -- Use block style cursor in insert mode as well
+}
 
 vim.diagnostic.config({
     -- For displaying inline LSP messages
