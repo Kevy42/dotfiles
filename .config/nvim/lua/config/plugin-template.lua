@@ -15,13 +15,13 @@ return {
 
     -- Have lazy.nvim run "setup require("[PLUGIN NAME]").setup([OPTIONS])" and supply with options instead of having to use "config" or manually running "setup()".
     -- NOTE: You cannot use both "opts" and "config" at the same time and will be forced to do a manual "setup()" in config if additional code is to be ran
-    opts = { },
+    opts = {},
 
     -- Executed after plugin is loaded
     -- config = function()
     -- end,
 
-    -- build = { }, -- Executed after plugin is installed or updated
+    -- build = "", -- Executed after plugin is installed or updated
 
     -- lazy = false, -- Lazy-load plugin
 
@@ -31,7 +31,7 @@ return {
 
     -- Lazy-load on key mapping
     -- keys = {
-        -- { mode="n", "<leader>f", "[COMMAND]", desc = "[DESC]" },
+    -- { mode="n", "<leader>f", "[COMMAND]", desc = "[DESC]" },
     -- },
 
     -- branch = "",
