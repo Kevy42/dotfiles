@@ -4,7 +4,12 @@ return {
     cond = true,
 
     config = function()
-        require("nvim-treesitter").setup({})
+        require("nvim-treesitter").setup(
+            {
+                highlight = {
+                    enable = true,
+                },
+            })
 
         require("nvim-treesitter").install({
             "bash",
@@ -20,6 +25,7 @@ return {
             "gitattributes",
             "gitcommit",
             "gitignore",
+            "html",
             "ini",
             "json",
             "lua",

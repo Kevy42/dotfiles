@@ -19,7 +19,7 @@ return {
             width = 0.75,
             height = 0.75,
             border = "rounded",
-            blend = 0, -- Transparency
+            blend = 10, -- Transparency
         },
 
         show_help = false,
