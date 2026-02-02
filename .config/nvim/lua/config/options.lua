@@ -71,8 +71,11 @@ vim.opt.autoread = true    -- Automatically read changes to file if external pro
 vim.opt.conceallevel = 0
 vim.opt.concealcursor = ""
 
+-- Use block cursor in most modes
 vim.opt.guicursor = {
-    "n-v-c-sm:block,i-ci-ve:block,r-cr-o:hor20" -- Use block style cursor in insert mode as well
+    "n-v-c-sm-o:block",
+    "i-ci-ve:block",
+    "r-cr:hor20",
 }
 
 vim.diagnostic.config({
