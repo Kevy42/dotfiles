@@ -9,10 +9,10 @@ return {
 
     opts = {
         model = "gpt-5.1",
+        temperature = 0.1,       -- Strictness vs creativity
         resources = "selection", -- What the model sees. Can be "selection" or or buffer
-        sticky = nil,            -- Custom pre-prompt/instructions
+        sticky = "#buffer",      -- Custom pre-prompt/instructions. Adding the buffer here will allow the model to see both buffer and selection
         diff = "block",          -- Or "unified"
-        temperature = 0.1,
 
         window = {
             layout = "float", -- "vertical", "horizontal", "float" or "replace"
@@ -23,8 +23,8 @@ return {
         },
 
         show_help = false,
-        auto_insert_mode = true, -- Start in insert mode after opening chat
-        insert_at_end = true,    -- Go to end of chat after entering insert mode
+        auto_insert_mode = false, -- Start in insert mode after opening chat
+        insert_at_end = false,    -- Go to end of chat after entering insert mode. NOTE: Is currently broken and messes with navigation
         clear_chat_on_new_prompt = false,
 
         instruction_files = {
@@ -35,25 +35,9 @@ return {
 
     build = "make tiktoken", -- Executed after plugin is installed or updated
 
-    lazy = false,            -- Lazy-load plugin
-
-    -- event = {}, -- Lazy-load on event
-    -- cmd = { }, -- Lazy-load on command
-
     -- Lazy-load on key mapping
     keys = {
-        { mode = "n", "<leader>ao", function() require("CopilotChat").toggle() end, desc = "Open Copilot Chat window" },
-
-        -- {
-        --     mode = "n",
-        --     "<leader>aa",
-        --     function()
-        --         local prompt = vim.fn.input("CopilotChat prompt: ")
-        --         if prompt ~= "" then
-        --             require("CopilotChat").ask(prompt)
-        --         end
-        --     end,
-        --     desc = "Ask Copilot Chat"
-        -- }
+        { mode = { "n", "v" }, "<leader>ao", function() require("CopilotChat").toggle() end, desc = "Open Copilot Chat window" },
+        { mode = "n",          "<leader>as", function() require("CopilotChat").stop() end,   desc = "Stop current AI output" },
     },
 }
