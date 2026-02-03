@@ -90,16 +90,25 @@ if ! shopt -oq posix; then
 fi
 
 # Custom
-alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+alias dotfiles="git --git-dir=$HOME/.dotfiles --work-tree=$HOME"
 
-alias ls='ls -A -c --color=auto --time-style=long-iso -h -l -N -s'
-alias dir='dir --color=auto'
-alias grep='grep --color=auto'
-alias vim='nvim'
-# export MANPAGER='nvim +Man!' # Could hang upon being resumed
-alias c='wl-copy'
+alias ls="ls -A -c --color=auto --time-style=long-iso -h -l -N -s"
+alias dir="dir --color=auto"
+alias grep="grep --color=auto"
+alias vim="nvim"
+# export MANPAGER="nvim +Man!" # Could hang upon being resumed
+alias c="wl-copy"
 
-gs() {
+# For quick copying of SSH key
+function cpsshkey() {
+    if [[ -f "$HOME/.ssh/id_ed25519.pub" ]]; then
+        cat "$HOME/.ssh/id_ed25519.pub" | wl-copy --trim-newline
+    else
+        echo "$HOME/.ssh/id_ed25519.pub: unable to find file"
+    fi
+}
+
+function gs() {
     declare -r option="$1"
 
     if [[ "$option" == "dotfiles" ]]; then
