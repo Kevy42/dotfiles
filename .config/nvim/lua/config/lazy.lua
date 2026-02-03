@@ -28,9 +28,9 @@ require("lazy").setup({
     -- Load all plugins in plugins folder
     spec = {
         { import = "plugins" },
-        { import = "plugins.disabled.themes" },
         { import = "plugins.dependencies" },
         { import = "plugins.ai" },
+        { import = "plugins.disabled.themes" },
     },
 
     install = {
