@@ -45,10 +45,10 @@ vim.keymap.set("n", "<leader>gi", function()
     vim.cmd.edit(vim.fn.stdpath("config") .. "/init.lua")
 end, { desc = "Go to Neovim init.lua" })
 
--- Ueful when using bufferline plugin
-vim.keymap.set("n", "<leader>bx", function()
-    pcall(vim.api.nvim_buf_delete, 0, { force = false })
-end, { desc = "Close current buffer" })
+-- Ueful when using bufferline plugin. Is currently handled by the mini-bufremove plugin
+-- vim.keymap.set("n", "<leader>bd", function()
+--     -- pcall(vim.api.nvim_buf_delete, 0, { force = false }) -- Native way
+-- end, { desc = "Close current buffer" })
 
 vim.keymap.set("n", "<leader>bX", function()
     for _, buf in ipairs(vim.api.nvim_list_bufs()) do
