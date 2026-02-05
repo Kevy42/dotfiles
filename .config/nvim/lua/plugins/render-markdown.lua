@@ -25,5 +25,5 @@ return {
         render_modes = { "n", "i", "c", "t" }, -- Stops the cursor from jumping when entering or leaving Insert mode by hiding delimiters in all modes
     },
 
-    ft = { "markdown", "copilot-chat" }, -- Lazy-load on filetype
+    ft = { "markdown", "Avante", "copilot-chat" }, -- Lazy-load on filetype
 }

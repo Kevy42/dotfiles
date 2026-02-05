@@ -30,7 +30,6 @@ require("lazy").setup({
         { import = "plugins" },
         { import = "plugins.dependencies" },
         { import = "plugins.ai" },
-        { import = "plugins.disabled.themes" },
     },
 
     install = {

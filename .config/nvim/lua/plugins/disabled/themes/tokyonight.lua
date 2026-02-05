@@ -1,6 +1,6 @@
 return {
     url = "https://github.com/folke/tokyonight.nvim",
-    cond = false,
+    cond = true,
     priority = 1000, -- Recommended to be high for colorschemes
 
     config = function()
