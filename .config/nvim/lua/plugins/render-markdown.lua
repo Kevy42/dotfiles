@@ -21,8 +21,8 @@ return {
         --     },
         -- },
 
-        restart_highlighter = true,            -- Restart the treesitter highlighter after attaching to buffer for the first time. May be necessary if plugin is lazy loaded (accoring to the docs)
-        render_modes = { "n", "i", "c", "t" }, -- Stops the cursor from jumping when entering or leaving Insert mode by hiding delimiters in all modes
+        restart_highlighter = true,                  -- Restart the treesitter highlighter after attaching to buffer for the first time. May be necessary if plugin is lazy loaded (accoring to the docs)
+        render_modes = { "n", "i", "c", "t", "no" }, -- Stops the cursor from jumping when entering or leaving Insert mode by hiding delimiters in most modes
     },
 
     ft = { "markdown", "Avante", "copilot-chat" }, -- Lazy-load on filetype

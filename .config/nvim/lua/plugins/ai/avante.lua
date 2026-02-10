@@ -9,14 +9,14 @@ return {
     cond = true,
 
     opts = {
-        instructions_file = "",
+        -- instructions_file = "" -- Does currently not support global paths :(
 
         provider = "copilot",
         auto_suggestions_provider = "copilot",
 
         providers = {
             copilot = {
-                model = "gpt-5.1", -- Will use generic if not specified
+                model = "gpt-4.1", -- Will use generic if not specified
                 timeout = 10000,
 
                 -- Can be set to false or list of tools to blacklist

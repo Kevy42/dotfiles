@@ -7,6 +7,8 @@ return {
     -- NOTE: You cannot use both "opts" and "config" at the same time and will be forced to do a manual "setup()" in config if additional code is to be ran
     opts = {
         options = {
+            numbers = "ordinal", -- Can be "ordinal", "buffer_id" or "both"
+
             -- style_preset = "minimal"
             indicator = {
                 icon = '▎', -- this should be omitted if indicator style is not 'icon'

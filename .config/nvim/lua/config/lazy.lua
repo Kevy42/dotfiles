@@ -29,6 +29,7 @@ require("lazy").setup({
     spec = {
         { import = "plugins" },
         { import = "plugins.dependencies" },
+        { import = "plugins.theme" },
         { import = "plugins.ai" },
     },
 
