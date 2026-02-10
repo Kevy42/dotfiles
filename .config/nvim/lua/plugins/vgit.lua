@@ -10,6 +10,10 @@ return {
 
     opts = {
         settings = {
+            live_blame = {
+                enabled = false,
+            },
+
             live_gutter = {
                 enabled = true,
             },
