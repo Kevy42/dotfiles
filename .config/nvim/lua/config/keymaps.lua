@@ -28,8 +28,8 @@ vim.keymap.set("n", "<leader>n", "<cmd>bn<CR>", { desc = "Switch to next buffer"
 vim.keymap.set("n", "<leader>N", "<cmd>bp<CR>", { desc = "Switch to previous buffer" })
 
 vim.keymap.set("n", "<leader>gy", function()
-    local dir = vim.fn.expand("%:p:h") -- Get base directory of the current buffer
-    vim.fn.setreg("+", dir)            -- Copy to clipboard
+    local dir = vim.fn.expand("%:p:h")          -- Get base directory of the current buffer
+    vim.fn.setreg("+", vim.fn.shellescape(dir)) -- shellescape will add single quotes to path if needed
     print("Copied path: " .. dir)
 end, { desc = "Copy current buffer directory to clipboard" })
 

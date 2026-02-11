@@ -73,9 +73,10 @@ vim.opt.concealcursor = ""
 
 -- Use block cursor in most modes
 vim.opt.guicursor = {
-    "n-v-c-sm-o:block",
-    "i-ci-ve:block",
-    "r-cr:hor20",
+    "n:block", -- normal
+    "v:block", -- visual
+    "i:block", -- insert
+    "o:block", -- operator-pending
 }
 
 vim.diagnostic.config({
