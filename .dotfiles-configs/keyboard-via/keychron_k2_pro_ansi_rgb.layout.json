@@ -2,7 +2,7 @@
   "name": "Keychron K2 Pro ANSI RGB",
   "vendorProductId": 875823648,
   "macros": [
-    "sudo du --total --human-readable --summarize --time .[!.]* * | sort --human-numeric-sort\n{KC_ENT}",
+    "sudo du --total --human-readable --summarize --time .[!.]* * | sort --human-numeric-sort{KC_ENT}",
     "ip -c -br n && echo && ip -c -br r && echo && ip -c -br a && echo && ip -c -br l{KC_ENT}",
     "ping -b google.com{KC_ENT}",
     "dig google.com{KC_ENT}",
