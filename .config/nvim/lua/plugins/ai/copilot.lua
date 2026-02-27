@@ -17,7 +17,7 @@ return {
             },
         },
 
-        copilot_model = "grok-code-fast-1", -- Fast model recommended for inline completions
+        copilot_model = "gpt-41-copilot", -- Fast model recommended for inline completions
         disable_limit_reached_message = false,
     },
 
