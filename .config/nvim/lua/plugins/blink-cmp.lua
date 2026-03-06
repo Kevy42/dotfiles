@@ -16,7 +16,28 @@ return {
             -- ["<C-p>"] = { "select_next", "fallback" },
         },
 
-        sources = { default = { "lsp", "path", "snippets", "buffer" }, }, -- Does NOT signify order in which items are displayed, only what sources are used
+        sources = {
+            default = { "lsp", "path", "snippets", "buffer" }, -- Does NOT signify order in which items are displayed, only what sources are used
+
+            -- Source priorities, commented out ones are using default values and have only been added for clarity
+            providers = {
+                -- lsp = {
+                --     score_offset = 0,
+                -- },
+
+                -- path = {
+                --     score_offset = 3,
+                -- },
+
+                snippets = {
+                    score_offset = 3 -- Needed in order to become first suggestion
+                },
+
+                -- buffer = {
+                --     score_offset = -3,
+                -- }
+            }
+        },
 
         completion = {
             keyword = { range = "full" },
@@ -39,7 +60,13 @@ return {
             ghost_text = { enabled = true },
         },
 
-        signature = { enabled = true },
+        signature = {
+            enabled = true,
+
+            -- These two might become annoying
+            show_on_keyword = true,
+            show_on_insert = true,
+        },
 
         appearance = { nerd_font_variant = "mono" },
 
