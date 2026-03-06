@@ -30,7 +30,7 @@ return {
                 -- },
 
                 snippets = {
-                    score_offset = 3 -- Needed in order to become first suggestion
+                    score_offset = 4 -- Needed in order to become first suggestion
                 },
 
                 -- buffer = {
