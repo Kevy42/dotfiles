@@ -6,7 +6,7 @@
     "ip -c -br n && echo && ip -c -br r && echo && ip -c -br a && echo && ip -c -br l{KC_ENT}",
     "ping -b google.com{KC_ENT}",
     "dig google.com{KC_ENT}",
-    "sudo tcpdump -e --interface any -n --direction inout -q -tttt ",
+    "sudo tcpdump -e --interface any -n --print --direction inout -q -tttt --packet-buffered -w \"/tmp/tcpdump_$(printf '%(%Y-%m-%d_%H-%M-%S)T' -1).pcap\" ",
     "sudo ss --numeric --listening --tcp --udp --processes{KC_ENT}",
     "sudo apt update && sudo apt install vim tmux htop ethtool dnsutils tcpdump curl traceroute netcat-openbsd nmap strace tree lsof fastfetch rsync",
     "",
