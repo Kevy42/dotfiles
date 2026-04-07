@@ -1,4 +1,4 @@
-# TODO: go through all options once tree-sitter 1.0 has been released
+-- TODO: go through all options in docs once nvim-treesitter 1.0 has been released
 return {
     url = "https://github.com/nvim-treesitter/nvim-treesitter",
     cond = true,
@@ -34,6 +34,7 @@ return {
         })
     end,
 
-    build = ":TSUpdate", -- Executed after plugin is installed or updated
-    lazy = false,        -- Lazy-load plugin
+    build = ":TSUpdate",                                -- Executed after plugin is installed or updated
+    lazy = false,                                       -- Lazy-load plugin
+    commit = "1970f0d3bbb99c7659e58914948749437c7b7398" -- nvim-treesitter only supports Neovim v0.12 in latest commits
 }
