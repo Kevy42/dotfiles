@@ -8,6 +8,12 @@ return {
     cond = true,
 
     opts = {
+
+        -- Disable completions in specific filtypes (taken from docs)
+        -- enabled = function()
+        --     return not vim.tbl_contains({ "AvantePromptInput" }, vim.bo.filetype)
+        -- end,
+
         keymap = {
             preset = "super-tab", -- Can be "default", "super-tab", "enter" or "none"
 
