@@ -12,7 +12,7 @@ return {
         -- ["_"] = { "trim_whitespace" }, -- Use across files with no detected formatter
 
         default_format_opts = {
-            -- NOTE: "lsp_format = 'fallback'" in "formatters_by_ft" is needed for all languages without dedicated formatters.
+            -- NOTE: "lsp_format = 'fallback'" in "formatters_by_ft" is needed for all languages with an LSP but without a dedicated formatter.
             -- This is to enforce manual selection of formatting as we don't wanna accidentally start using the LSP when a dedicated formatter is available/better
             lsp_format = "never", -- Can be "never", "fallback", "prefer", "first" or "last"
         },

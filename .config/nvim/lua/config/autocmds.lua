@@ -1,4 +1,17 @@
--- May disable other "o" related auto formatting, we shall see
+-- Removes trailing whitespaces before saving without messing up cursor positioning or the current search pattern.
+-- Could technically do this using already installed plugin(s), but figured it's best to do with an autocommand given it's such a fundamental editor feature
+vim.api.nvim_create_autocmd("BufWritePre", {
+    pattern = "*",
+    callback = function()
+        local view = vim.fn.winsaveview()
+        vim.cmd([[keeppatterns %s/\s\+$//e]])
+        vim.fn.winrestview(view)
+    end,
+
+    desc = "Remove trailing whitespace before saving",
+})
+
+-- NOTE: May disable other "o" related auto formatting, we shall see
 vim.api.nvim_create_autocmd("BufEnter", {
     callback = function()
         vim.opt_local.formatoptions:remove { "o" }

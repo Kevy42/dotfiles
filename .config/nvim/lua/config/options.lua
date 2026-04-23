@@ -71,13 +71,13 @@ vim.opt.autoread = true    -- Automatically read changes to file if external pro
 vim.opt.conceallevel = 0
 vim.opt.concealcursor = ""
 
--- Use block cursor in most modes
-vim.opt.guicursor = {
-    "n:block", -- normal
-    "v:block", -- visual
-    "i:block", -- insert
-    "o:block", -- operator-pending
-}
+-- Use block cursor (in most modes)
+-- vim.opt.guicursor = {
+--     "n:block", -- normal
+--     "v:block", -- visual
+--     "i:block", -- insert
+--     "o:block", -- operator-pending
+-- }
 
 vim.diagnostic.config({
     -- For displaying inline LSP messages
