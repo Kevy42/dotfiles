@@ -69,9 +69,11 @@ return {
         signature = {
             enabled = true,
 
-            -- These two might become annoying
-            show_on_keyword = true,
-            show_on_insert = true,
+            trigger = {
+                -- These might become annoying
+                show_on_keyword = true,
+                show_on_insert = true
+            }
         },
 
         appearance = { nerd_font_variant = "mono" },
