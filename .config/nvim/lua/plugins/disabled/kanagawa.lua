@@ -1,6 +1,6 @@
 return {
     url = "https://github.com/rebelot/kanagawa.nvim",
-    cond = true,
+    cond = false,
     priority = 1000,
 
     config = function()
