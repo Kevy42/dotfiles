@@ -8,6 +8,5 @@ return {
     end,
 
     build = ":TokenCompile", -- Executed after plugin is installed or updated
-
     lazy = false,            -- Lazy-load plugin
 }
