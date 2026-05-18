@@ -6,7 +6,7 @@ return {
         "MunifTanjim/nui.nvim",
     },
 
-    cond = true,
+    cond = false,
 
     opts = {
         -- instructions_file = "" -- Does currently not support global paths :(
