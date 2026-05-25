@@ -6,11 +6,11 @@ return {
     config = function()
         -- LSP configuration template (taken from ":h lsp")
         -- NOTE:
-        -- Many LSPs will automatically invoke formatters and linters if available, allowing for lsp_format = "faillback" to be used
+        -- Many LSPs will automatically invoke formatters and linters if available, allowing for lsp_format = "fallback" (in Conform config) to be used
         -- while still maintaining the same functionality. It is however, in my opinnion, still better to manually invoke them
         -- as that'll both incrase the robustness of your config (as the blast radius of your LSP breaking will be limited)
         -- as well as conceptually separate the duties of the formatter, LSP and linter.
-        -- Formatter and linter related settings should thus not be configured via the LSP
+        -- Formatter and linter related settings should thus not be configured via the LSP wherever feasible
 
         -- The default options for each language servers can be found under the "lspconfig-all" help section (":h lspconfig-all").
         -- vim.lsp.config("bashls", {
@@ -30,7 +30,9 @@ return {
         vim.lsp.config("bashls", {
             settings = {
                 bashIde = {
-                    includeAllWorkspaceSymbols = true -- Helps with autocompletion of symbols defined in other files
+                    includeAllWorkspaceSymbols = true, -- Helps with autocompletion of symbols defined in other files
+                    shellcheckArguments =
+                    "--check-sourced --enable=add-default-case,avoid-nullary-conditions,check-extra-masked-returns,check-set-e-suppressed,check-unassigned-uppercase,deprecate-which,quote-safe-variables,require-double-brackets --external-sources"
                 }
             }
         })
