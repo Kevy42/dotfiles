@@ -22,15 +22,15 @@ return {
             lualine_x = { "filetype", "lsp_status", "selectioncount", "progress" },
             lualine_y = {
                 -- To show auto-session session name
-                -- function()
-                --     return "session: " .. require("auto-session.lib").current_session_name(true)
-                -- end,
+                function()
+                    return "session: " .. require("auto-session.lib").current_session_name(true)
+                end,
             },
             lualine_z = {
-                {
-                    "datetime",
-                    style = "%H:%M:%S"
-                }
+                -- {
+                --     "datetime",
+                --     style = "%H:%M:%S"
+                -- }
             }
         },
     },
