@@ -24,8 +24,8 @@ vim.keymap.set("n", "<leader>P", "\"zP", { desc = "Paste before cursor from z re
 vim.keymap.set("n", "n", "nzz", { desc = "Center cursor when jumping between search matches" })
 vim.keymap.set("n", "N", "Nzz", { desc = "Center cursor when jumping between search matches" })
 
-vim.keymap.set("n", "<leader>n", "<cmd>bn<CR>", { desc = "Switch to next buffer" })
-vim.keymap.set("n", "<leader>N", "<cmd>bp<CR>", { desc = "Switch to previous buffer" })
+vim.keymap.set("n", "<leader>h", "<cmd>bp<CR>", { desc = "Switch to previous buffer" })
+vim.keymap.set("n", "<leader>l", "<cmd>bn<CR>", { desc = "Switch to next buffer" })
 
 vim.keymap.set("n", "<leader>gy", function()
     local dir = vim.fn.expand("%:p:h")          -- Get base directory of the current buffer
