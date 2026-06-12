@@ -86,3 +86,6 @@ vim.diagnostic.config({
 
     update_in_insert = true
 })
+
+-- Recommended by auto-session plugin
+vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
