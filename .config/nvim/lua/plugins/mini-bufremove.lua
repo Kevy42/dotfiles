@@ -1,11 +1,8 @@
 return {
-    url = "https://github.com/nvim-mini/mini.nvim",
+    url = "https://github.com/nvim-mini/mini.bufremove",
     cond = true,
 
-    -- Cannot use opts = {} as mini the plugin and module names don't match (downside of mini.nvim)
-    config = function()
-        require("mini.bufremove").setup()
-    end,
+    opts = {},
 
     -- Lazy-load on key mapping
     keys = {

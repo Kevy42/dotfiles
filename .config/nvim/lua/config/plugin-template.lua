@@ -13,12 +13,16 @@ return {
     -- init = function() -- Executed before plugin is loaded
     -- end,
 
-    -- Have lazy.nvim run "setup require("[PLUGIN NAME]").setup([OPTIONS])" and supply with options instead of having to use "config" or manually running "setup()".
+    -- Have lazy.nvim automatically call "require("[PLUGIN NAME]").setup([OPTIONS])" and supply "setup()" with options instead of having to manually call "setup()" inside "config =".
     -- NOTE: You cannot use both "opts" and "config" at the same time and will be forced to do a manual "setup()" in config if additional code is to be ran
     opts = {},
 
     -- Executed after plugin is loaded
     -- config = function()
+    --     Usually what the plugin docs say to use, but not always
+    --     require("[PLUGIN NAME]").setup({
+    --         [PLUGIN SPECIFIC OPTIONS]
+    --     })
     -- end,
 
     -- build = "", -- Executed after plugin is installed or updated
