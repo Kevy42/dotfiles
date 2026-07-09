@@ -1,6 +1,6 @@
 vim.opt.termguicolors = true -- Enable 24-bit colors
 
-vim.g.mapleader = " "
+vim.g.mapleader = ' '
 vim.g.maplocalleader = "\\"
 
 vim.g.have_nerd_font = true -- User defined variable used by various plugins
@@ -8,15 +8,33 @@ vim.g.have_nerd_font = true -- User defined variable used by various plugins
 vim.opt.number = true
 vim.opt.relativenumber = true
 
-vim.opt.mouse = "a"
+vim.opt.mouse = 'a'
 vim.opt.mousemoveevent = true
 
 vim.opt.showmode = false -- already displayed by plugin
 
--- Uses escape sequences to copy to the clipboard via the terminal multiplexer instead of invoking a clipboard manager tool like wl-clipboard.
--- See :h provider-clipboard
-vim.g.clipboard = "osc52"
-vim.opt.clipboard = "unnamedplus" -- Use system clipboard for all copy operations
+-- Uses escape sequences to copy to the clipboard via the terminal multiplexer instead of invoking a clipboard manager tool like wl-clipboard (see :h provider-clipboard).
+vim.g.clipboard = {
+    name = 'OSC 52 (copy) + wl-paste (paste)',
+
+    copy = {
+        ['+'] = require('vim.ui.clipboard.osc52').copy('+'),
+        ['*'] = require('vim.ui.clipboard.osc52').copy('*'),
+    },
+
+    -- Default snippet (seen below) from docs didn't work (known issue with OSC 52) so had to use wl-paste instead
+    -- paste = {
+    --     ['+'] = require('vim.ui.clipboard.osc52').paste('+'),
+    --     ['*'] = require('vim.ui.clipboard.osc52').paste('*'),
+    -- },
+
+    paste = {
+        ['+'] = function() return vim.fn.systemlist({ 'wl-paste' }) end,
+        ['*'] = function() return vim.fn.systemlist({ 'wl-paste', '--primary' }) end,
+    },
+}
+
+vim.opt.clipboard = 'unnamedplus' -- Use system clipboard for all copy operations
 
 vim.opt.wrap = false
 vim.opt.breakindent = true -- Keep visual indent for part of line that's wrapped
@@ -26,7 +44,7 @@ vim.opt.smartcase = true
 vim.opt.incsearch = true -- Show matches as you type
 -- vim.opt.hlsearch = false -- Don't highlight search results
 
-vim.opt.signcolumn = "yes"
+vim.opt.signcolumn = 'yes'
 
 vim.opt.swapfile = false
 vim.opt.updatetime = 1000 -- Save to swap file every second
@@ -68,14 +86,14 @@ vim.opt.autoread = true    -- Automatically read changes to file if external pro
 
 -- Show all characters in file
 vim.opt.conceallevel = 0
-vim.opt.concealcursor = ""
+vim.opt.concealcursor = ''
 
 -- Use block cursor (in most modes)
 -- vim.opt.guicursor = {
---     "n:block", -- normal
---     "v:block", -- visual
---     "i:block", -- insert
---     "o:block", -- operator-pending
+--     'n:block', -- normal
+--     'v:block', -- visual
+--     'i:block', -- insert
+--     'o:block', -- operator-pending
 -- }
 
 vim.diagnostic.config({
@@ -87,4 +105,4 @@ vim.diagnostic.config({
 })
 
 -- Recommended by auto-session plugin
-vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+vim.o.sessionoptions = 'blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions'
