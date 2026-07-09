@@ -13,11 +13,10 @@ vim.opt.mousemoveevent = true
 
 vim.opt.showmode = false -- already displayed by plugin
 
---  Wait until main eventloop is running as option could delay startup.
---  Not sure if really needed but was taken from kickstart.nvim
-vim.schedule(function()
-    vim.opt.clipboard = "unnamedplus"
-end)
+-- Uses escape sequences to copy to the clipboard via the terminal multiplexer instead of invoking a clipboard manager tool like wl-clipboard.
+-- See :h provider-clipboard
+vim.g.clipboard = "osc52"
+vim.opt.clipboard = "unnamedplus" -- Use system clipboard for all copy operations
 
 vim.opt.wrap = false
 vim.opt.breakindent = true -- Keep visual indent for part of line that's wrapped
