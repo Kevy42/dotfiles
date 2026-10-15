@@ -10,7 +10,7 @@ return {
         })
 
         vim.o.background = "dark" -- Dark or light
-        vim.cmd([[colorscheme tokyonight]])
+        vim.cmd.colorscheme("tokyonight")
     end,
 
     lazy = false

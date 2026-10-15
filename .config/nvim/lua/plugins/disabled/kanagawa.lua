@@ -17,7 +17,7 @@ return {
             -- },
         })
 
-        vim.cmd([[colorscheme kanagawa]])
+        vim.cmd.colorscheme("kanagawa")
     end,
 
     lazy = false, -- Lazy-load plugin
